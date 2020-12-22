@@ -16,17 +16,17 @@ const Home = () => {
             rating={5} 
             />
             <Product 
-            id="123456" 
-            title='The lean start up' 
-            price={29.99} 
-            image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400.jpg"
-            rating={5}
+            id="1287626" 
+            title='Stylish Kitchen Mixer' 
+            price={239.99} 
+            image="https://images-na.ssl-images-amazon.com/images/I/810%2BGNdkzKL._AC_SX450_.jpg"
+            rating={4}
             />
       </div>
       <div className="home_row">
             <Product 
             id="7654366" 
-            title='Samsung Gaming monitor' 
+            title='Samsung Watch' 
             price={199.99} 
             image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
             rating={3}
@@ -49,10 +49,10 @@ const Home = () => {
           <div className="home_row">
             <Product 
             id="123456" 
-            title='The lean start up' 
-            price={29.99} 
-            image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400.jpg"
-            rating={5}
+            title='Samsung Gaming Moniter' 
+            price={1094.99} 
+            image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
+            rating={4}
          />
           </div>
         </div>
