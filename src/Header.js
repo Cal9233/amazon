@@ -4,11 +4,11 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from 'react-router-dom';
 import { useStateValue } from "./StateProvider";
 import './Header.css';
-import { ShoppingBasket } from '@material-ui/icons';
+// import { ShoppingBasket } from '@material-ui/icons';
 
 const Header = () => {
 
-  const [{ basket }, dispatch ] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className="header">
@@ -23,6 +23,7 @@ const Header = () => {
           <SearchIcon className="header_searchIcon"/>
       </div>
       <div className="header_nav">
+        <Link to="/login">
         <div className="header_option">
           <span className="header_option1">
           Hello
@@ -31,6 +32,7 @@ const Header = () => {
             Sign In
           </span>
         </div>
+        </Link>
         <div className="header_option">
         <span className="header_option1">
           Returns
