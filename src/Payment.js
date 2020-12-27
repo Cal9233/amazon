@@ -7,6 +7,7 @@ import CurrencyFormat from "react-currency-format";
 import CheckoutProduct from './CheckoutProduct';
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "./reducer";
+import { db } from "./firebase";
 
 const Payment = () => {
 
@@ -47,10 +48,27 @@ const Payment = () => {
       }
     }).then(({ paymentIntent }) => {
       // paymentIntent = payment confirmation
+
+      db
+      .collection('users')
+      .doc(user?.uid)
+      .collection('orders')
+      .doc(paymentIntent.id)
+      .set({
+        basket: basket,
+        amount: paymentIntent.amount,
+        created: paymentIntent.created
+      })
+
       setSucceeded(true);
       setError(null);
       setProcessing(false);
       // not push because we dont want them to be in a loop, redirect to order page
+
+      dispatch({
+        type: 'EMPTY_BASKET'
+      })
+
       history.replace('/orders')
     })
   }
