@@ -1,4 +1,3 @@
-import { ShoppingBasket } from '@material-ui/icons'
 import React from 'react'
 import CurrencyFormat from 'react-currency-format'
 import { useHistory } from 'react-router-dom';
@@ -9,7 +8,7 @@ import './Subtotal.css'
 const Subtotal = () => {
 
   const history = useHistory();
-  const [{ basket }, dispatch ] = useStateValue();
+  const [{ basket } ] = useStateValue();
   return (
     <div className="subtotal">
       <CurrencyFormat

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Home from "./Home";
+import Orders from "./Orders";
 import Checkout from "./Checkout";
 import Payment from "./Payment";
 import Login from "./Login";
@@ -16,7 +17,7 @@ const promise = loadStripe(
 );
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [ dispatch ] = useStateValue();
 
   useEffect(() => {
     // Will only run once when the app components load
@@ -50,6 +51,9 @@ function App() {
           <Switch>
             <Route path='/login'>
               <Login />
+            </Route>
+            <Route path='/orders'>
+              <Orders />
             </Route>
             <Route path='/checkout'>
               <Checkout />
